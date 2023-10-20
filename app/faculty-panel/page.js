@@ -43,17 +43,17 @@ const FacultyPanel=()=>{
                             <div className="w-1/2 px-2 bg-red-700 flex justify-center rounded-md"><button className="px-2 py-2  text-white">Optionals</button></div>
                         </div>
                         <h1 className="my-4 text-center text-2xl">INDIAN ECONOMY</h1>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 py-2 border-2 mx-2">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 py-2 border-2 mx-2 gap-2">
   {indianHistort.map((item, index) => (
-    <div key={index} className="w-full h-full flex flex-col  my-2 mx-2 border-2">
-      <div className="flex items-center w-full h-[250px] py-2 my-4 overflow-hidden bg-gray-200">
+    <div key={index} className="w-full h-full flex flex-col   mx-2 border-2 ">
+      <div className="flex items-center w-full h-[250px] pb-2 my-4 overflow-hidden bg-gray-200">
         <img
           className="h-full w-full object-cover"
           src={item.img}
           alt={item.name} 
         />
       </div>
-      <div className=" my-2 px-4">
+      <div className=" my-2 px-4  ">
         <p className="text-lg font-semibold text-sky-600 py-2">{item.name}</p>
         <p className="text-md text-wrap py-2">{item.text1}</p>
         <p className="text-md text-wrap py-2">{item.text2}</p>
