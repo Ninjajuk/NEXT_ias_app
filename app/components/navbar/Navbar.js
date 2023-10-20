@@ -40,8 +40,8 @@ const Navbar=()=>{
             <div className="flex py-2 h-full">
               <div className="flex px-1 h-6">
                 {navdata.map((item, index) => (
-                       <div  className="relative group" onMouseEnter={(e) => handleSubMenuHover(e, index)} onMouseLeave={(e) => handleSubMenuHover(e, index)}>
-                       <Link href={item.href} className='px-2 py-1  hover:text-[#cf3726]'>
+                       <div  className="relative " onMouseEnter={(e) => handleSubMenuHover(e, index)} onMouseLeave={(e) => handleSubMenuHover(e, index)}>
+                       <Link href={item.href} className='px-2 py-1 hover:border-b-2 hover:border-red-400  hover:text-[#cf3726] z-10'>
                          {item.title}
                        </Link>
                        {item.submenu && (

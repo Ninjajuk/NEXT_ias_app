@@ -36,17 +36,17 @@ const FacultyPanel=()=>{
                 {/* distinguised faculty */}
 
                  {/*  faculty card */}
-                 <section className="bg-yellow-300">
-                    <div className="max-w-[990px] mx-auto bg-white py-8">
-                        <div className="flex items-center justify-center w-[250px] mx-auto gap-2">
+                 <section className="bg-yellow-100">
+                    <div className="max-w-[990px] mx-auto bg-white py-8 ">
+                        <div className="flex items-center justify-center w-[250px] mx-auto gap-2 ">
                             <div className="w-1/2 px-2 bg-red-700 flex justify-center rounded-md"><button className=" px-4 py-2  text-white">GS</button></div>
                             <div className="w-1/2 px-2 bg-red-700 flex justify-center rounded-md"><button className="px-2 py-2  text-white">Optionals</button></div>
                         </div>
                         <h1 className="my-4 text-center text-2xl">INDIAN ECONOMY</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 py-2 border-2 mx-2 gap-2">
   {indianHistort.map((item, index) => (
-    <div key={index} className="w-full h-full flex flex-col   mx-2 border-2 ">
-      <div className="flex items-center w-full h-[250px] pb-2 my-4 overflow-hidden bg-gray-200">
+    <div key={index} className=" h-full flex flex-col   mx-2 border-2 ">
+      <div className="flex items-center  h-[250px] pb-2 my-4 overflow-hidden bg-gray-200">
         <img
           className="h-full w-full object-cover"
           src={item.img}
