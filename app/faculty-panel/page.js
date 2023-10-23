@@ -59,13 +59,13 @@ const FacultyPanel=()=>{
               Distinguished Faculty
             </h1>
             <div className="w-full flex flex-col md:flex-row">
-              <div className="md:w-2/5">
+              <div className="sm:mx-auto md:w-2/5">
                 <div className="w-full">
                   <img src="https://cdnstatic.nextias.com/assets/images/CMD_SIR.png" />
                 </div>
               </div>
               <div className="md:w-3/5 px-4">
-                <p className="mb-4 px-2">
+                <p className="mb-4 px-2 pt-4">
                   Mr. B. Singh (Ex.IES) is the founder and CMD of NEXT IAS and
                   MADE EASY Group. He has a teaching experience of more than 20
                   years & has authored over a dozen books on GS & Civil
@@ -104,10 +104,10 @@ const FacultyPanel=()=>{
         <section className="bg-white my-4">
           <div className="max-w-[990px] mx-auto bg-white pb-8 ">
             <div className="flex items-center justify-center w-[250px] mx-auto  ">
-              <div className={`w-1/2 px-2 ${gsteam?'bg-red-700':'bg-red-100'}  flex justify-center rounded-md`}>
+              <div className={`w-1/2 px-2 ${gsteam?'bg-red-700':'bg-red-200'}  flex justify-center rounded-md`}>
                 <button onClick={handleGsTEam} className=" px-4 py-2  text-white">GS</button>
               </div>
-              <div className={`w-1/2 px-2 ${optionalteam?'bg-red-700':'bg-red-100'}  flex justify-center rounded-md`}>
+              <div className={`w-1/2 px-2 ${optionalteam?'bg-red-700':'bg-red-200'}  flex justify-center rounded-md`}>
                 <button onClick={handle_OptionalTeam} className="px-2 py-2  text-white">Optionals</button>
               </div>
             </div>

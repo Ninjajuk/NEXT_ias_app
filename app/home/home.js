@@ -4,7 +4,7 @@ import WhatsNew from "./whatnew";
 import StudentCorner from "./studentcorner";
 
 const NextIasHome=()=>{
-    const[whatsnewactive,setWhatnewActive]=useState(false)
+    const[whatsnewactive,setWhatnewActive]=useState(true)
     const[studentcorner,setStudentcorner]=useState(false)
 
     function handleWhatsnew(){
@@ -98,7 +98,7 @@ btn:'Read More'
               ))}
           </div>
 
-          <div className="my-2 bg-green-400 px-2 py-4 h-[250px] rounded-md">
+          <div className="my-2 bg-green-400 px-2 py-4 h-[250px] rounded-md shadow-md">
             <div className="flex gap-2 w-full h-full px-4">
                 <div className=" w-1/3 h-full flex flex-col gap-2">
                     <div onClick={handleWhatsnew} className={`h-1/2 flex items-center px-4 ${whatsnewactive ?'bg-blue-600':'bg-blue-200'}  cursor-pointer`}>

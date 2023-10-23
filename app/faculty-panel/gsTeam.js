@@ -16,7 +16,7 @@ const GsTeam=()=>{
                   key={index}
                   className=" h-full flex flex-col   mx-2 border-2 "
                 >
-                  <div className="flex items-center  h-[250px] pb-2 my-4 overflow-hidden bg-gray-200">
+                  <div className="flex items-center  lg:h-[250px] pb-2 my-4 overflow-hidden bg-gray-200">
                     <img
                       className="h-full w-full object-cover"
                       src={item.img}
@@ -59,7 +59,7 @@ const GsTeam=()=>{
                   key={index}
                   className=" h-full flex flex-col  border-2 "
                 >
-                  <div className="w-full flex items-center  h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
+                  <div className="w-full flex items-center  lg:h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
                     <img
                       className="h-full w-full object-cover border-2 border-gray-200"
                       src={item.img}
@@ -103,7 +103,7 @@ const GsTeam=()=>{
                   key={index}
                   className=" h-full flex flex-col  border-2 "
                 >
-                  <div className="max-w-full flex items-center  h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
+                  <div className="max-w-full flex items-center  lg:h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
                     <img
                       className="h-full w-full object-cover border-2 border-gray-200"
                       src={item.img}
@@ -147,7 +147,7 @@ const GsTeam=()=>{
                   key={index}
                   className=" h-full flex flex-col  border-2 "
                 >
-                  <div className="max-w-full flex items-center  h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
+                  <div className="max-w-full flex items-center  lg:h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
                     <img
                       className="h-full w-full object-cover border-2 border-gray-200"
                       src={item.img}

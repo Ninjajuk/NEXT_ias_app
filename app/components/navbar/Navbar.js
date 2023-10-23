@@ -25,17 +25,18 @@ const Navbar=()=>{
               <a href=''className='px-2  py-1 mx-2 rounded-md flex items-center'>
                 <span><img src='https://cdnstatic.nextias.com/assets/images/icons/icon-call.svg'/></span>
                 <span className='pl-2'>8081300200</span> </a>
-              <a href=''className='px-2  py-1 mx-1 rounded-md'>
+              <Link href='/'className='px-2  py-1 mx-1 rounded-md'>
                 <div className='px-2 py-1'><img src='https://cdnstatic.nextias.com/assets/images/icons/search.svg'/></div>
-                 </a>
+                 </Link>
        
             </div>
-            <div className="max-w-[1400px] flex items-center justify-around">
+            <div className="flex items-center justify-around ">
             <div className="px-4 py-2" width="146" height="30">
-              <img
+              <Link href='/'>   <img
                 className="w-full h-full object-cover"
                 src="https://cdnstatic.nextias.com/assets/images/logo/next-ias.png"
-              />
+              /></Link>
+           
             </div>
             <div className="flex py-2 h-full">
               <div className="flex px-1 h-6">

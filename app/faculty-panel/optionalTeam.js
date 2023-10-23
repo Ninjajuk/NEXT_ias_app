@@ -4,17 +4,17 @@ const OptionalTeam=()=>{
     return(
         <>
                 {/* History art and culture */}
-                <section className="bg-white">
+                <section className="bg-white pt-8">
           <div className="max-w-[990px] mx-auto bg-white pb-8 ">
         
-            <h1 className="my-4 text-center text-2xl text-sky-500">HISTORY, ART & CULTURE</h1>
+            {/* <h1 className="my-4 text-center text-2xl text-sky-500">HISTORY, ART & CULTURE</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 py-2 mx-2  ">
               {HISTORY_ART_CULTURE .map((item, index) => (
                 <div
                   key={index}
                   className=" h-full flex flex-col  border-2 "
                 >
-                  <div className="w-full flex items-center  h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
+                  <div className="w-full flex items-center  lg:h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
                     <img
                       className="h-full w-full object-cover border-2 border-gray-200"
                       src={item.img}
@@ -51,14 +51,13 @@ const OptionalTeam=()=>{
         <section className="bg-white">
           <div className="max-w-[990px] mx-auto bg-white pb-8 ">
         
-            <h1 className="my-4 text-center text-2xl text-sky-500">GEOGRAPHY</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 py-2 mx-2  ">
               {geography_faculty.map((item, index) => (
                 <div
                   key={index}
                   className=" h-full flex flex-col  border-2 "
                 >
-                  <div className="max-w-full flex items-center  h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
+                  <div className="max-w-full flex items-center  lg:h-[250px]   my-4 overflow-hidden  px-2 py-2 ">
                     <img
                       className="h-full w-full object-cover border-2 border-gray-200"
                       src={item.img}
