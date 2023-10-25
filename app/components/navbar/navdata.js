@@ -30,7 +30,7 @@ export const navdata=[
 {title:'Test Series',href:'',isActive:false,},
 {title:'Current Affairs',href:'',isActive:false,},
 {title:'Student Portal',href:'',isActive:false,},
-{title:'Centers',href:'centers',isActive:false,},
+{title:'Centers',href:'centers/delhi',isActive:false,},
 ]
 
 export const footerdata=[

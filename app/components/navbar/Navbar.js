@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import {navdata} from './navdata'
 import Sidebar1 from './Sidebar';
 import { useState } from 'react';
+import LoginModal from '../Modal/LoginModal';
 
 const Navbar=()=>{
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -15,9 +16,17 @@ const Navbar=()=>{
           submenu.classList.toggle('hidden');
         }
       };
+      const [isModalOpen, setIsModalOpen] = useState(false);
+      const openIncomeModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const closeIncomeModal = () => {
+        setIsModalOpen(false);
+      };
     return (
       <>
-        <nav className="w-full bg-gray-100 sticky top-0">
+        <nav className="w-full bg-gray-100 sticky top-0 z-10">
              {/* Desktop menu starts here  */}
           <div className="hidden xl:flex flex-col">
             <div className="flex justify-end  px-2 pt-4">
@@ -108,10 +117,10 @@ const Navbar=()=>{
               </div>
 
               <div className="flex flex-wrap gap-2 items-center ">
-                <button className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button  className="px-2 py-1 border-2 border-red-400 text-red-600">
                   MTS portal
                 </button>
-                <button className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button onClick={openIncomeModal} className="px-2 py-1 border-2 border-red-400 text-red-600">
                   Student Login
                 </button>
               </div>
@@ -134,6 +143,13 @@ const Navbar=()=>{
           {/* Mobile Menu ends here */}
         </nav>
         <Sidebar1 isMobileSidebarOpen={isMobileSidebarOpen} />
+        {isModalOpen && (
+          <LoginModal
+            // updateFormData={updateFormData}
+            isOpen={isModalOpen}
+            onClose={closeIncomeModal}
+          />
+        )}
 
       </>
     );
