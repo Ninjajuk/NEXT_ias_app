@@ -1,5 +1,5 @@
 'use client'
-import {indianHistort,HISTORY_ART_CULTURE,geography_faculty,polity_faculty } from './facultyData'
+
 import GsTeam from './gsTeam'
 import OptionalTeam from './optionalTeam'
 import React, { useState } from "react";

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl  py-8">
           <div className="flex flex-col md:flex-row  w-full py-2">
             <div className="md:w-2/5  flex flex-col px-2 py-4">
-              <div className='mb-4'>
+              <div className='mb-4'style={{ width: "150px", height: "30px" }}>
                 <img src="https://cdnstatic.nextias.com/assets/images/logo/next-ias.png" />
               </div>
               <div className='mb-4'>
@@ -73,16 +73,19 @@ const Footer = () => {
             </div>
 
             <div className="md:w-3/5  px-2 py-4">
-              <div className="w-full flex pl-4 pr-1">
-                <div className="w-1/5 flex flex-col">
+              <div className="w-full flex flex-col md:flex-row pl-4 pr-1">
+                <div className="md:w-1/5 flex flex-col flex-wrap pb-8">
+                  <div className='flex flex-wrap'>
                   {footerdata.map((item) => (
-                    <Link href={item.href} className="py-2">
+                    <Link href={item.href} className="py-2 w-1/2 md:w-full">
                       {item.title}
                     </Link>
                   ))}
+                  </div>
+              
                 </div>
-                <div className="w-2/5">
-                  <div className="w-full px-4">
+                <div className="md:w-2/5 pb-8">
+                  <div className="w-full md:px-4">
                     <h5 className="mb-4">NEXT IAS (Delhi)</h5>
                     <ul>
                       <li className="">
@@ -117,7 +120,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="w-2/5">
-                  <div className="w-full px-4">
+                  <div className="w-full md:px-4">
                     <div>
                       <h5 className='mb-4'>NEXT IAS (Bhopal)</h5>
                       <ul>

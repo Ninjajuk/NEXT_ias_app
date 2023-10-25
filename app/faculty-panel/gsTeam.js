@@ -24,12 +24,12 @@ const GsTeam=()=>{
                     />
                   </div>
                   <div className=" my-2 px-4  ">
-                    <p className="text-lg font-semibold text-sky-600 py-2">
+                    <h1 className=" text-3xl lg:text-lg font-semibold text-sky-600 py-2">
                       {item.name}
-                    </p>
+                    </h1>
                     <ul>
                       <li className="flex">
-                        <span className="text-sm py-2">{item.text1}</span>
+                        <span className="text-lg lg:text-sm py-2">{item.text1}</span>
                       </li>
                       <li>
                         <span>{item.text2}</span>
