@@ -18,7 +18,7 @@ const Footer = () => {
               <div className="flex ">
                 <ul
                   className="flex nav mt-md-2 mt-1 pt-2"
-                  class="nav mt-md-2 mt-1 pt-2"
+                 
                 >
                   <li _ngcontent-serverapp-c9="" class="me-1">
                     <a

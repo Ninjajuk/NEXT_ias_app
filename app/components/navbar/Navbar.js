@@ -6,12 +6,17 @@ import Sidebar1 from './Sidebar';
 import { useState } from 'react';
 import LoginModal from '../Modal/LoginModal';
 import SignUpModal from '../Modal/SignUpModal';
+import CoursesHover from './CoursesHoverItems';
 
 const Navbar=()=>{
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+  const [isCoursesHovered, setCoursesHovered] = useState(false);
     const handleSubMenuHover = (e, index) => {
         // You can add logic to handle submenu visibility here
         // For simplicity, let's just add a className to show the submenu
+        if (navdata[index].title === 'Courses') {
+          setCoursesHovered(!isCoursesHovered);
+        }
         const submenu = e.currentTarget.querySelector('.submenu');
         if (submenu) {
           submenu.classList.toggle('hidden');
@@ -36,6 +41,10 @@ const Navbar=()=>{
         setSignupModalOpen(false);
         setIsModalOpen(false);
       };
+
+     
+
+
     return (
       <>
         <nav className="w-full bg-gray-100 sticky top-0 z-10">
@@ -97,36 +106,38 @@ const Navbar=()=>{
                   />
                 </Link>
               </div>
-              <div className="flex">
-                {" "}
-                {navdata.map((item, index) => (
-                  <div
-                    className="relative "
-                    onMouseEnter={(e) => handleSubMenuHover(e, index)}
-                    onMouseLeave={(e) => handleSubMenuHover(e, index)}
-                  >
-                    <Link
-                      href={item.href}
-                      className="px-2 py-1 hover:border-b-2 hover:border-red-400  hover:text-[#cf3726] z-10"
-                    >
-                      {item.title}
-                    </Link>
-                    {item.submenu && (
-                      <div className="submenu hidden  absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-10">
-                        {item.submenu.map((sublink) => (
-                          <Link
-                            key={sublink.name}
-                            href={sublink.href}
-                            className="block px-2 py-1 text-white hover:text-red-800"
-                          >
-                            {sublink.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+
+           <div className="flex">
+      {navdata.map((item, index) => (
+        <div
+          key={item.title}
+          className="relative"
+          onMouseEnter={(e) => handleSubMenuHover(e, index)}
+          onMouseLeave={(e) => handleSubMenuHover(e, index)}
+        >
+          <Link
+            href={item.href}
+            className="px-2 py-1 hover:border-b-2 hover:border-red-400 hover:text-[#cf3726] z-10"
+          >
+            {item.title}
+          </Link>
+          {/* {item.title === 'Courses' && isCoursesHovered && <CoursesHover/>} */}
+          {item.submenu && (
+            <div className="submenu hidden absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-10">
+              {item.submenu.map((sublink) => (
+                <Link
+                  key={sublink.name}
+                  href={sublink.href}
+                  className="block px-2 py-1 text-white hover:text-red-800"
+                >
+                  {sublink.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
 
               <div className="flex flex-wrap gap-2 items-center ">
                 <button  className="px-2 py-1 border-2 border-red-400 text-red-600">
