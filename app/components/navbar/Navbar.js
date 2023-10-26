@@ -5,6 +5,7 @@ import {navdata} from './navdata'
 import Sidebar1 from './Sidebar';
 import { useState } from 'react';
 import LoginModal from '../Modal/LoginModal';
+import SignUpModal from '../Modal/SignUpModal';
 
 const Navbar=()=>{
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -17,11 +18,22 @@ const Navbar=()=>{
         }
       };
       const [isModalOpen, setIsModalOpen] = useState(false);
-      const openIncomeModal = () => {
+      const [isSignupModalOpen, setSignupModalOpen] = useState(false);
+
+      const openLoginModal = () => {
         setIsModalOpen(true);
       };
+      const openSignupModal = () => {
+        setSignupModalOpen(true);
     
-      const closeIncomeModal = () => {
+      };
+    
+      const closeLoginModal = () => {
+        setIsModalOpen(false);
+        setSignupModalOpen(false)
+      };
+      const closeSignUpModal = () => {
+        setSignupModalOpen(false);
         setIsModalOpen(false);
       };
     return (
@@ -37,7 +49,7 @@ const Navbar=()=>{
                 NST Answer key
               </a>
               <a
-                href=""
+                href="/foundation-courses"
                 className="px-2 border-2 border-red-400 py-1  rounded-md ml-2"
               >
                 Classroom Courses
@@ -120,7 +132,7 @@ const Navbar=()=>{
                 <button  className="px-2 py-1 border-2 border-red-400 text-red-600">
                   MTS portal
                 </button>
-                <button onClick={openIncomeModal} className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button onClick={openLoginModal} className="px-2 py-1 border-2 border-red-400 text-red-600">
                   Student Login
                 </button>
               </div>
@@ -143,13 +155,24 @@ const Navbar=()=>{
           {/* Mobile Menu ends here */}
         </nav>
         <Sidebar1 isMobileSidebarOpen={isMobileSidebarOpen} />
-        {isModalOpen && (
+        {isModalOpen ? (
           <LoginModal
             // updateFormData={updateFormData}
             isOpen={isModalOpen}
-            onClose={closeIncomeModal}
+            onClose={closeLoginModal}
+            onClick={openSignupModal}
+           
           />
-        )}
+        ):null}
+                {isSignupModalOpen ? (
+          <SignUpModal
+            // updateFormData={updateFormData}
+            isOpen={isModalOpen}
+            onClose={closeSignUpModal}
+            onClick={openLoginModal}
+      
+          />
+        ):null}
 
       </>
     );

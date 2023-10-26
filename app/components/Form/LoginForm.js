@@ -4,7 +4,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 // import { useNavigate } from "react-router-dom";
 
 
-const LoginForm = () => {
+const LoginForm = ({onClick}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
@@ -33,9 +33,9 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="  flex justify-center items-center min-h-lg">
-      <div className="w-full flex flex-col md:flex-row rounded-md max-h-lg">
-        <div className=" md:block md:w-1/2 overflow-hidden"style={{backgroundImage:'https://cdnstatic.nextias.com/assets/images/login-signp-pop-up.png'}}>
+    <div className="  flex justify-center items-center min-h-lg ">
+      <div className="w-full flex flex-col md:flex-row  ">
+        <div className=" md:block md:w-1/2 overflow-hidden rounded-md"style={{backgroundImage:'https://cdnstatic.nextias.com/assets/images/login-signp-pop-up.png'}}>
           <img
             src="https://cdnstatic.nextias.com/assets/images/login-signp-pop-up.png"
             alt="Your Image"
@@ -44,7 +44,7 @@ const LoginForm = () => {
           />
         </div>
         <form
-          className="bg-white p-6  shadow-md w-full md:w-1/2 "
+          className="bg-white p-6 rounded-md  shadow-md w-full md:w-1/2 "
           onSubmit={handleLogin}
         >
           <h2 className="text-2xl font-semibold mb-6">
@@ -112,14 +112,14 @@ const LoginForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white rounded-lg py-2 hover:bg-blue-600 transition duration-300"
+            className="w-full bg-[#ed3237] text-white rounded-lg py-2 hover:bg-[#e74f5b] transition duration-300 border-[#ed3237]"
           >
             Login
           </button>
           <div className="flex justify-between mt-4">
             <p>Don't have an account</p>
             <button
-              onClick={handleRegister}
+      onClick={onClick}
               className="text-blue-500 hover:underline"
             >
               Register
@@ -134,7 +134,7 @@ const LoginForm = () => {
           <div className="flex mt-4 text-center gap-4">
             <button
               onClick={handleLogin}
-              className="w-full bg-red-600 text-white rounded-lg py-2 hover:bg-green-600 transition duration-300"
+              className="w-full bg-red-600 text-white rounded-lg py-2 hover:bg-red-800 transition duration-300"
             >
               Gmail
             </button>

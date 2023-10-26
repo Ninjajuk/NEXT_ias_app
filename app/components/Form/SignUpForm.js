@@ -7,7 +7,7 @@ const initailUserState = {
   phone: "",
   password: ""
 };
-const SignUpForm = () => {
+const SignUpForm = ({onClick}) => {
   const [user, setUser] = useState(initailUserState);
 //   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
@@ -49,22 +49,22 @@ const SignUpForm = () => {
     console.log("Redirecting to login page...");
   };
   return (
-    <SnackbarProvider maxSnack={3} autoHideDuration={3000} variant="success">
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="w-full md:w-1/2 flex flex-col md:flex-row rounded-md shadow-md">
+    <>
+      <div className="flex justify-center items-center min-h-lg">
+        <div className="w-full flex flex-col md:flex-row rounded-md h-full">
           <div className=" md:block md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+              src="https://cdnstatic.nextias.com/assets/images/login-signp-pop-up.png"
               alt="Your Image"
               className="w-full h-full object-cover"
             />
           </div>
           <form
-            className="bg-white p-6 rounded-lg shadow-md w-full md:w-1/2"
+            className="bg-white p-4 rounded-lg shadow-md w-full md:w-1/2"
             onSubmit={handleRegister}
           >
-            <h2 className="text-2xl font-semibold mb-6">Register</h2>
-            <div className="mb-4">
+            <h2 className="text-2xl font-semibold mb-2">Register</h2>
+            <div className="mb-2">
               <label htmlFor="name" className="block text-gray-600">
                 Name
               </label>
@@ -79,7 +79,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-2">
               <label htmlFor="email" className="block text-gray-600">
                 Email
               </label>
@@ -94,7 +94,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-2">
               <label htmlFor="phone" className="block text-gray-600">
                 Phone
               </label>
@@ -109,7 +109,7 @@ const SignUpForm = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-2">
               <label htmlFor="password" className="block text-gray-600">
                 Password
               </label>
@@ -139,24 +139,12 @@ const SignUpForm = () => {
               <div className="border-t border-gray-400 flex-grow"></div>
             </div>
             <div className="flex mt-4 text-center gap-4">
-              <button
-                onClick={handleLogin}
-                className="w-full bg-red-600 text-white rounded-lg py-2 hover:bg-green-600 transition duration-300"
-              >
-                Gmail
-              </button>
-              <button
-                onClick={handleLogin}
-                style={{ backgroundColor: "black" }}
-                className="w-full bg-green-500 text-white rounded-lg py-2 hover:bg-green-600 transition duration-300"
-              >
-                Github
-              </button>
+       <p className="text-center">Already have an account? <span><button onClick={onClick} className="text-blue-600">Log In</button></span></p>
             </div>
           </form>
         </div>
       </div>
-    </SnackbarProvider>
+    </>
   );
 };
 

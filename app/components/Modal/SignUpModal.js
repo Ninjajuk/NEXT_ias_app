@@ -1,9 +1,10 @@
 import React from "react";
-import LoginForm from "../Form/LoginForm";
+
 import { MdOutlineClear } from "react-icons/md";
+import SignUpForm from "../Form/SignUpForm";
 
 
-const LoginModal = ({ isOpen, onClose,onClick}) => {
+const SignUpModal = ({ isOpen, onClose,onClick,  }) => {
   const modalStyles = {
     position: "fixed",
     top: 0,
@@ -28,10 +29,10 @@ const LoginModal = ({ isOpen, onClose,onClick}) => {
   };
 
   return (
-    <div style={modalStyles} className="overflow-y-auto ">
-      <div style={modalContentStyles} className="relative ">
+    <div style={modalStyles} className="overflow-y-auto">
+      <div style={modalContentStyles} className="relative">
         {/* <h2 className="text-2xl font-semibold mb-4">Income Form</h2> */}
-        <LoginForm onClick={onClick} />
+        <SignUpForm onClick={onClick}/>
         <button
           className="bg-gray-400  hover:bg-gray-600  font-semibold text-white   absolute top-0 right-0 h-8 w-8 rounded-full flex items-center justify-center"
           onClick={onClose}
@@ -43,4 +44,4 @@ const LoginModal = ({ isOpen, onClose,onClick}) => {
   );
 };
 
-export default LoginModal;
+export default SignUpModal;
