@@ -16,7 +16,7 @@ export default function DailyCurrentAffairs(){
   };
     return (
       <>
-        <h1 className="text-5xl text-center py-4">DailyCurrentAffairs</h1>
+        <h1 className="text-2xl md:text-5xl text-center py-4">DailyCurrentAffairs</h1>
         <section className="py-4">
           <div className="w-full px-[25px] flex flex-col md:flex-row gap-4">
             {/* Accordion left starts here */}
@@ -52,7 +52,7 @@ export default function DailyCurrentAffairs(){
               <section>
                 <div className="w-full my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md bg-white">
                   
-                  <div className="bg-yellow-300  rounded-md shadow-md h-[350px] flex flex-col">
+                  <div className="bg-yellow-300   h-[350px] flex flex-col ">
                   <div className="h-1/6 bg-blue-800 py-4 text-center text-white rounded-sm text-2xl sticky top-0">
                       <h1 className="txt">Editorial Analysis</h1>
                     </div>
@@ -142,8 +142,8 @@ export default function DailyCurrentAffairs(){
 
               {/* Join the newsletter and be updated with the latest news starts here */}
               <section>
-                <div className="my-4 bg-gray-600 rounded-md h-24 ">
-                  <div className="h-full flex items-center justify-between px-12">
+                <div className="my-4 bg-gray-600 rounded-md max-h-48 ">
+                  <div className="h-full flex flex-col md:flex-row items-center justify-between px-12">
                     <div className="flex gap-4">
                       <img src="https://cdnstatic.nextias.com/assets/images/icons/email-white.svg" />
                       <h1 className="text-white">

@@ -27,20 +27,30 @@ const GsTeam=()=>{
                     <h1 className=" text-3xl lg:text-lg font-semibold text-sky-600 py-2">
                       {item.name}
                     </h1>
-                    <ul>
-                      <li className="flex">
-                        <span className="text-lg lg:text-sm py-2">{item.text1}</span>
-                      </li>
-                      <li>
-                        <span>{item.text2}</span>
-                      </li>
-                      <li>
-                        <span className="">{item.text3}</span>
-                      </li>
-                    </ul>
-                    {/* <p className="text-md text-wrap py-2 flex items-center"></p>
-        <p className="text-md text-wrap py-2">{item.text2}</p>
-        <p className="text-md text-wrap py-2">{item.text3}</p> */}
+                    <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text1}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text2}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text3}</p>
+            </li>
+          </ul>
+    
                   </div>
                 </div>
               ))}
@@ -71,17 +81,29 @@ const GsTeam=()=>{
                     <p className="text-lg font-semibold text-sky-600 py-2">
                       {item.name}
                     </p>
-                    <ul>
-                      <li className="flex">
-                        <span className="text-sm py-2">{item.text1}</span>
-                      </li>
-                      <li>
-                        <span>{item.text2}</span>
-                      </li>
-                      <li>
-                        <span className="">{item.text3}</span>
-                      </li>
-                    </ul>
+                    <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text1}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text2}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text3}</p>
+            </li>
+          </ul>
 
                   </div>
                 </div>
@@ -115,17 +137,29 @@ const GsTeam=()=>{
                     <p className="text-lg font-semibold text-sky-600 py-2">
                       {item.name}
                     </p>
-                    <ul>
-                      <li className="flex">
-                        <span className="text-sm py-2">{item.text1}</span>
-                      </li>
-                      <li>
-                        <span>{item.text2}</span>
-                      </li>
-                      <li>
-                        <span className="">{item.text3}</span>
-                      </li>
-                    </ul>
+                    <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text1}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text2}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text3}</p>
+            </li>
+          </ul>
 
                   </div>
                 </div>
@@ -159,17 +193,29 @@ const GsTeam=()=>{
                     <p className="text-lg font-semibold text-sky-600 py-2">
                       {item.name}
                     </p>
-                    <ul>
-                      <li className="flex">
-                        <span className="text-sm py-2">{item.text1}</span>
-                      </li>
-                      <li>
-                        <span>{item.text2}</span>
-                      </li>
-                      <li>
-                        <span className="">{item.text3}</span>
-                      </li>
-                    </ul>
+                    <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text1}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text2}</p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="text-sm ml-4 text-gray-900">{item.text3}</p>
+            </li>
+          </ul>
 
                   </div>
                 </div>

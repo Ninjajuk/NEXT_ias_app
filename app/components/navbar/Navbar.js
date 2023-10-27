@@ -44,25 +44,25 @@ const Navbar=()=>{
             <div className="flex justify-end  px-2 pt-4">
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1  rounded-md "
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md "
               >
                 NST Answer key
               </a>
               <a
-                href="/foundation-courses"
-                className="px-2 border-2 border-red-400 py-1  rounded-md ml-2"
+                href="/classroom-courses/foundation-courses"
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md ml-2"
               >
                 Classroom Courses
               </a>
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1 rounded-md ml-2"
+                className="px-2 ring-1 ring-amber-400 py-1 rounded-md ml-2"
               >
                 Live/Online Classes
               </a>
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1  rounded-md ml-2"
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md ml-2"
               >
                 Our Selections
               </a>
@@ -112,7 +112,7 @@ const Navbar=()=>{
                       {item.title}
                     </Link>
                     {item.submenu && (
-                      <div className="submenu hidden  absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-10">
+                      <div className="submenu hidden  absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-20">
                         {item.submenu.map((sublink) => (
                           <Link
                             key={sublink.name}
@@ -129,10 +129,10 @@ const Navbar=()=>{
               </div>
 
               <div className="flex flex-wrap gap-2 items-center ">
-                <button  className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button  className="px-2 py-1 ring-1 ring-amber-400 text-red-600">
                   MTS portal
                 </button>
-                <button onClick={openLoginModal} className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button onClick={openLoginModal} className="px-2 py-1 ring-1 ring-amber-400 text-red-600">
                   Student Login
                 </button>
               </div>
