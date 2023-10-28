@@ -131,7 +131,7 @@ const Navbar=()=>{
                           <Link
                             key={sublink.name}
                             href={sublink.href}
-                            className="block px-2 py-1 text-white hover:text-red-800"
+                            className="block px-2 py-1 text-white hover:text-red-800 hover:border-b-2 hover:border-red-400"
                           >
                             {sublink.name}
                           </Link>

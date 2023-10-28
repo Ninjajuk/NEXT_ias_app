@@ -142,7 +142,7 @@ export default function DailyCurrentAffairs(){
 
               {/* Join the newsletter and be updated with the latest news starts here */}
               <section>
-                <div className="my-4 bg-gray-600 rounded-md max-h-48 ">
+                <div className="my-4 bg-gray-600 rounded-md h-48 ">
                   <div className="h-full flex flex-col md:flex-row items-center justify-between px-12">
                     <div className="flex gap-4">
                       <img src="https://cdnstatic.nextias.com/assets/images/icons/email-white.svg" />
