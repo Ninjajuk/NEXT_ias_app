@@ -8,7 +8,12 @@ import LoginModal from '../Modal/LoginModal';
 import SignUpModal from '../Modal/SignUpModal';
 import CoursesHover from './CoursesHoverItems';
 
+ 
+import { usePathname } from 'next/navigation'
+
 const Navbar=()=>{
+  const pathname=usePathname()
+
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isCoursesHovered, setCoursesHovered] = useState(false);
     const handleSubMenuHover = (e, index) => {
@@ -53,25 +58,25 @@ const Navbar=()=>{
             <div className="flex justify-end  px-2 pt-4">
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1  rounded-md "
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md "
               >
                 NST Answer key
               </a>
               <a
-                href="/foundation-courses"
-                className="px-2 border-2 border-red-400 py-1  rounded-md ml-2"
+                href="/classroom-courses/foundation-courses"
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md ml-2"
               >
                 Classroom Courses
               </a>
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1 rounded-md ml-2"
+                className="px-2 ring-1 ring-amber-400 py-1 rounded-md ml-2"
               >
                 Live/Online Classes
               </a>
               <a
                 href=""
-                className="px-2 border-2 border-red-400 py-1  rounded-md ml-2"
+                className="px-2 ring-1 ring-amber-400 py-1  rounded-md ml-2"
               >
                 Our Selections
               </a>
@@ -106,44 +111,42 @@ const Navbar=()=>{
                   />
                 </Link>
               </div>
-
-           <div className="flex">
-      {navdata.map((item, index) => (
-        <div
-          key={item.title}
-          className="relative"
-          onMouseEnter={(e) => handleSubMenuHover(e, index)}
-          onMouseLeave={(e) => handleSubMenuHover(e, index)}
-        >
-          <Link
-            href={item.href}
-            className="px-2 py-1 hover:border-b-2 hover:border-red-400 hover:text-[#cf3726] z-10"
-          >
-            {item.title}
-          </Link>
-          {/* {item.title === 'Courses' && isCoursesHovered && <CoursesHover/>} */}
-          {item.submenu && (
-            <div className="submenu hidden absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-10">
-              {item.submenu.map((sublink) => (
-                <Link
-                  key={sublink.name}
-                  href={sublink.href}
-                  className="block px-2 py-1 text-white hover:text-red-800"
-                >
-                  {sublink.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+              <div className="flex">
+                {" "}
+                {navdata.map((item, index) => (
+                  <div
+                    className="relative "
+                    onMouseEnter={(e) => handleSubMenuHover(e, index)}
+                    onMouseLeave={(e) => handleSubMenuHover(e, index)}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`px-2 py-1 hover:border-b-2 hover:border-red-400 ${pathname === item.href ? 'border-b-2 border-sky-400' : ''}  hover:text-[#cf3726] z-10`}
+                    >
+                      {item.title}
+                    </Link>
+                    {item.submenu && (
+                      <div className="submenu hidden  absolute top-full left-0 bg-[#ba9d5a] border border-gray-300 rounded-md p-2 w-[250px] z-10">
+                        {item.submenu.map((sublink) => (
+                          <Link
+                            key={sublink.name}
+                            href={sublink.href}
+                            className="block px-2 py-1 text-white hover:text-red-800"
+                          >
+                            {sublink.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
 
               <div className="flex flex-wrap gap-2 items-center ">
-                <button  className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button  className="px-2 py-1 ring-1 ring-amber-400 text-red-600">
                   MTS portal
                 </button>
-                <button onClick={openLoginModal} className="px-2 py-1 border-2 border-red-400 text-red-600">
+                <button onClick={openLoginModal} className="px-2 py-1 ring-1 ring-amber-400 text-red-600">
                   Student Login
                 </button>
               </div>

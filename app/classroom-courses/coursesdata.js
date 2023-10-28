@@ -1,5 +1,9 @@
 
 import { MdOutlineWatchLater,MdMenuBook,MdGroups2 } from "react-icons/md";
+
+
+import { FaAngleDown } from "react-icons/fa";
+
 export const PreMains=[
     {
         img:'https://cdnstatic.nextias.com/banner/3306640CSAT-banner.jpg',
@@ -29,4 +33,12 @@ export const PreMains=[
         icon:<MdOutlineWatchLater className="w-6 h-6 text-sky-600"/>,
         para1:'11-12 Months '
     },
+]
+
+export const courseLink=[
+    {title:'Pre Cum Main Foundation Courses',href:'',isActive:false},
+    {title:'Prelims',href:'',isActive:false},
+    {title:'Mains',href:'',isActive:false},
+    {title:'First Step',href:'',isActive:false},
+    {title:'More Courses',href:'',isActive:false,icon:<FaAngleDown/>,submenu:[{name:'Optional Courses',href:'',current: false,},{name:'Interview Guidance Program',href:'',current: false,},{name:'Postal Courses',href:'',current: false,},{name:'Faculty Panel',href:'',current: false,}]},
 ]

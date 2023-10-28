@@ -1,39 +1,25 @@
+'use client'
 
-import {PreMains} from '../classroom-courses/coursesdata'
+import {PreMains} from '../coursesdata'
 
-const TestSeries=()=>{
+export default function FoundationCourses(){
+
+
+
+
+
     return (
       <>
         <section>
-          <div className="max-w-[1200px] mx-auto ">
-            <h1 className="text-4xl my-4">Prelims Test Series</h1>
-            <div>
-              <ul className="flex my-4">
-                <li className="pr-4 tracking-widest hover:text-red-700 border-b-2 hover:border-red-600 ">
-                  <a href="">Prelims Test Series</a>
-                </li>
-                <li className="px-4 tracking-widest hover:text-red-700 hover:border-b-2 hover:border-red-600 ">
-                  <a href="">Mains Test Series (GS & Optional)</a>
-                </li>
-                <li className="px-4 tracking-widest hover:text-red-700 hover:border-b-2 hover:border-red-600 ">
-                  <a href="">Anubhav (All India Open Mock Test)</a>
-                </li>
-              </ul>
-            </div>
-            <p className="py-4">
-              The importance of practicing UPSC Prelims test series has been
-              proven time and again with the increasing difficulty of the exam
-              with passing years. Explore the finest test series comprising
-              relevant questions strictly based on the UPSC CSE exam pattern.
-            </p>
-            <h1 className="py-4 text-lg font-semibold">
-              Prelims Test Series for CSE 2024 (Offline/Online)
-            </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
-              {PreMains.slice(0, 2).map((item) => (
+          <div className="max-w-[1200px] mx-auto">
+      
+            <h1 className="text-lg py-4 font-bold text-gray-800">Pre Cum Main Foundation Courses</h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-4">
+              {PreMains.map((item) => (
                 <a href="">
                   <div className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
-                    <div className="bg-red-400 h-2/5 w-full">
+                    <div className="bg-red-400 md:h-2/5 w-full">
                       <img
                         src={item.img}
                         className="h-full w-full object-cover"
@@ -68,9 +54,10 @@ const TestSeries=()=>{
                 </a>
               ))}
             </div>
+
           </div>
         </section>
       </>
     );
+    
 }
-export default TestSeries;
