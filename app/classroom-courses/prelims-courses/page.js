@@ -1,12 +1,7 @@
 
 'use client'
 
-
-
 export default function PrelimsCurses(){
-
-
-
 
     return (
       <section className="bg-white py-8">

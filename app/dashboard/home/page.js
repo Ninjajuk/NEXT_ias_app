@@ -1,17 +1,12 @@
-import {style} from './style.css'
-
+import DashboardLayout from "../layout";
 
 const StudentDashBoard=()=>{
 
     return(
         <>
-        <div >
-            
-            
-            </div>
-
-     
-
+       
+            <h1>home</h1>    
+        
         </>
     )
 }
