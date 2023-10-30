@@ -70,11 +70,11 @@ btn:'Read More'
       <>
         <section className="w-full bg-[#cee3d9] ">
           <div className="  ">
-            <div className="relative w-full  h-[550px] transition-opacity duration-500 ease-in-out">
+            <div className="relative w-full  h-[550px] ">
               <img
                 src={images[currentImageIndex]}
-                className="h-full w-full object-cover transition-opacity duration-500 ease-in-out"
-                style={{ height: "100%", objectFit: "cover" }}
+                className="h-full w-full object-fit "
+                style={{ height: "100%", }}
               />
               {/* Left arrow icon */}
               <div

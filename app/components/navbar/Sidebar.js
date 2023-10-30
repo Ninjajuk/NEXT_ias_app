@@ -1,29 +1,36 @@
-import { data } from "./navdata";
 
+import { data } from "./navdata";
+import '../../classroom-courses/first-courses/style.css'
 import { useState } from "react";
 // import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaAngleRight, FaAngleDown, FaAngleUp } from "react-icons/fa";
 
-const Sidebar1 = ({ isMobileSidebarOpen }) => {
-  const [openMenu, setOpenMenu] = useState(""); // Keep track of opened submenu
+const Sidebar1 = ({ isMobileSidebarOpen, }) => {
+
   const [openSubmenu, setOpenSubmenu] = useState({}); // Keep track of opened submenu items
 
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
+  const [openMenu, setOpenMenu] = useState(false); // track  opened submenu
+
+  // const openNav = () => {
+  //   setIsOpen(true);
+  //   // alert('Hi Samsu')
+  // };
+
+  // const closeNav = () => {
+  //   setIsOpen(false);
+  // };
 
 
 
   return (
     <>
       <div
-        className={` h-screen bg-white overflow-y-auto hide-scrollbar transition-transform duration-500 ease-in-out text-black shadow p-4 flex flex-col ${
-          isMobileSidebarOpen
-            ? "-transform translate-x-0 left-0 fixed"
-            : "hidden"
-        } `}
-        style={{ zIndex: "1000",width:'300px' }}
+        className={``}
+    
       >
-        <div className="md:block overflow-y-auto">
+        <div className={`sidenav  ${isMobileSidebarOpen ? 'w-[250px] ' : 'w-0'}`}>
           <div className="flex flex-col">
             {/* <div className="px-6 flex items-center max-w-full h-16">
               <img

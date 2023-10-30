@@ -1,25 +1,17 @@
 
-import {PreMains} from '../classroom-courses/coursesdata'
+'use client'
+import {PreMains} from '../../classroom-courses/coursesdata'
+
 
 const TestSeries=()=>{
+
+
     return (
       <>
         <section>
           <div className="max-w-[1200px] mx-auto ">
             <h1 className="text-4xl my-4">Prelims Test Series</h1>
-            <div>
-              <ul className="flex my-4">
-                <li className="pr-4 tracking-widest hover:text-red-700 border-b-2 hover:border-red-600 ">
-                  <a href="">Prelims Test Series</a>
-                </li>
-                <li className="px-4 tracking-widest hover:text-red-700 hover:border-b-2 hover:border-red-600 ">
-                  <a href="">Mains Test Series (GS & Optional)</a>
-                </li>
-                <li className="px-4 tracking-widest hover:text-red-700 hover:border-b-2 hover:border-red-600 ">
-                  <a href="">Anubhav (All India Open Mock Test)</a>
-                </li>
-              </ul>
-            </div>
+     
             <p className="py-4">
               The importance of practicing UPSC Prelims test series has been
               proven time and again with the increasing difficulty of the exam

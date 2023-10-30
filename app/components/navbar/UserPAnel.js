@@ -3,7 +3,7 @@ import { MdLogout } from "react-icons/md";
 
 function UserPanel() {
   return (
-    <div className="flex justify-around  flex items-center cursor-pointer p-1 hover:bg-gray-400 rounded-full ">
+    <div className="   flex items-center cursor-pointer p-1 hover:bg-gray-400 rounded-full ">
       <div className="flex items-center">
         <img
           className="h-10 w-10 rounded-full"

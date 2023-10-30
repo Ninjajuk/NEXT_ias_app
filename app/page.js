@@ -2,10 +2,10 @@
 
 import NextIasHome from './home/home'
 
-export default function Home() {
+export default function HomeLayout({children}) {
   return (
 <>
-
+{children}
 <NextIasHome/>
 </>
   )

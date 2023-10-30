@@ -44,13 +44,13 @@ import {
       path: "",
       active: false
     },
-    {
-      menu: "Business analytics",
-      icon: <MdAnalytics />,
-      submenu: "",
-      path: "/business-analytics",
-      active: false
-    },
+    // {
+    //   menu: "Business analytics",
+    //   icon: <MdAnalytics />,
+    //   submenu: "",
+    //   path: "/business-analytics",
+    //   active: false
+    // },
     {
       menu: "Team",
       icon: <FaUsers />,
@@ -65,13 +65,13 @@ import {
       path: "/project",
       active: false
     },
-    {
-      menu: "Calender",
-      icon: <FaRegCalendarAlt />,
-      submenu: "/calendar",
-      path: "/calendar",
-      active: false
-    },
+    // {
+    //   menu: "Calender",
+    //   icon: <FaRegCalendarAlt />,
+    //   submenu: "/calendar",
+    //   path: "/calendar",
+    //   active: false
+    // },
   
     {
       menu: "Promotion",

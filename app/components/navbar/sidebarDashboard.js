@@ -1,3 +1,5 @@
+
+'use client'
 import { Link } from "@mui/material";
 import UserPanel from "./UserPAnel";
 import { data } from "./dataDashboard";
@@ -5,10 +7,15 @@ import { data } from "./dataDashboard";
 
 // import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { useState } from "react";
 
 const Sidebar1 = () => {
-//   const [openMenu, setOpenMenu] = useState(""); // Keep track of opened submenu
-//   const [openSubmenu, setOpenSubmenu] = useState({}); // Keep track of opened submenu items
+  const [openMenu, setOpenMenu] = useState(false); // Keep track of opened submenu
+
+  function handleMenu(){
+    setOpenMenu(!openMenu)
+  }
+//   const [openSubmenu, setOpenSubmenu] = useState({}); 
 //   const location = useLocation();
 //   const navigate = useNavigate();
   // Function to handle submenu click
@@ -52,17 +59,9 @@ const Sidebar1 = () => {
 //   };
   return (
     <>
-      <div
-        // className={`md:w-1/5 max-h-screen bg-white overflow-y-auto hide-scrollbar transition-transform duration-300 text-black shadow p-4 flex flex-col ${
-        //   isMobileSidebarOpen
-        //     ? "-transform translate-x-0 left-0 fixed"
-        //     : "hidden"
-        // } md:block`}
-        style={{  height: "100vh",backgroundColor:'gray' }}
-      >
-        <div className="hidden md:block">
-          <div className="flex flex-col">
-            <div className="px-6 flex items-center max-w-full h-16">
+      <div style={{  height: "100vh",backgroundColor:'gray' }}>
+        <div className="hidden md:flex flex-col h-full hover:overflow-y-auto">
+            <div className="px-6 flex items-center min-w-full h-16">
               <img
                 className="max-w-full h-8"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -75,75 +74,45 @@ const Sidebar1 = () => {
                 <h1 className="px-6 font-medium text-black">Home</h1>
                 {data.map((item, index) => (
                   <div key={index}>
-                    <div
-                    //   onClick={() => {
-                    //     handleSubMenuClick(item.menu);
-                    //     navigate(`${item.path}`);
-                    //   }}
-                    //   className={`flex items-center p-3 space-x-2 hover:bg-gray-400 cursor-pointer rounded-full ${
-                    //     isActiveMenu(item.path) && isActiveSubMenu(item.path)
-                    //       ? "bg-gray-400"
-                    //       : ""
-                    //   }`}
+                    <div onClick={handleMenu} className={`flex items-center transition duration-400  p-3 space-x-2 text-sm hover:bg-gray-400 cursor-pointer rounded-full text-white 
+                     `}
                     >
-                      {item.icon}
-                      <span>{item.menu}</span>
-                      {/* {item.submenu.length > 0 ? (
-                        openMenu === item.menu ? (
-                          <span className="ml-auto text-2xl">
-                            <FaAngleUp />
-                          </span>
-                        ) : (
+                     <span>{item.icon}</span> 
+                      <span className="">{item.menu}</span>
+                      {Array.isArray(item.submenu)&&item.submenu.length > 0 ? (
                           <span className="ml-auto text-2xl">
                             <FaAngleDown />
                           </span>
+                        ) : (
+                          // <span className="ml-auto text-2xl">
+                          //   <FaAngleDown />
+                          // </span>
+                          null
                         )
-                      ) : null} */}
+                       }
+                       
                     </div>
-                    {/* {Array.isArray(item.submenu) &&
-                      (item.submenu.length > 0 ||
-                        item.submenu.some((subItem) =>
-                          isActiveSubMenu(`${item.path}${subItem.path}`)
-                        )) && (
-                        <div
-                          className={`flex flex-col ${
-                            openMenu === item.menu ||
-                            item.submenu.some((subItem) =>
-                              isActiveSubMenu(`${item.path}${subItem.path}`)
-                            )
-                              ? "block"
-                              : "hidden"
-                          }`}
-                        >
-                          {item.submenu.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              to={`${item.path}${subItem.path}`}
-                              className={`pl-10 py-2 hover:bg-gray-400 rounded-full ${
-                                isActiveSubMenu(`${item.path}${subItem.path}`)
-                                  ? "bg-gray-400"
-                                  : ""
-                              }`}
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </div>
-                      )} */}
+                  {Array.isArray(item.submenu)&&openMenu&&item.submenu.map((subItem, subIndex) => (
+                                    <Link
+                                      key={subIndex}
+                                      to=''
+                                      className={`pl-2 py-1  rounded-full flex flex-col  max-h-0 overflow-hidden transition-max-height duration-200 ease-in-out`}
+                                    >
+                                      {subItem.title}
+                                    </Link>
+                                  ))}
                   </div>
+                        
                 ))}
               </div>
+
             </div>
-          </div>
-
-
-              {/* UserPanel placed outside the submenu section */}
-        <div className="pt-24">
+ {/* UserPanel placed outside the submenu section */}
+        <div className="mt-12 mb-4">
           <UserPanel/>
         </div>
-        </div>
-
-    
+          </div>
+       
       </div>
     </>
   );
