@@ -30,17 +30,8 @@ import {
       active: false
     },
     {
-      menu: "My Shop",
+      menu: "My Handouts",
       icon: <FaFileAlt />,
-      submenu: [
-        { title: "Add products", path: "/shop/addproducts" },
-        { title: "Products", path: "/shop/productslist" },
-        { title: "Orders", path: "/shop/orders" },
-        // { title: "Orders Details", path: "/orders" },
-        { title: "Customers", path: "/shop/customers" },
-        { title: "Customers Details", path: "/shop/customersdetails" },
-        { title: "Refund", path: "/shop/refund" }
-      ],
       path: "",
       active: false
     },
@@ -52,16 +43,14 @@ import {
     //   active: false
     // },
     {
-      menu: "Team",
+      menu: "My Bookmarks",
       icon: <FaUsers />,
-      submenu: "",
       path: "/team",
       active: false
     },
     {
-      menu: "Project",
+      menu: "Annoucements",
       icon: <FaFolder />,
-      submenu: "",
       path: "/project",
       active: false
     },
@@ -74,24 +63,28 @@ import {
     // },
   
     {
-      menu: "Promotion",
+      menu: "My Profile",
       icon: <FaImage />,
-      submenu: "",
       path: "/promotion",
       active: false
     },
     {
-      menu: "Message",
+      menu: "Free Initiative",
       icon: <MdOutlineSms />,
-      submenu: "",
       path: "/message",
       active: false
     },
     {
-      menu: "Setting",
+      menu: "Current Affairs",
       icon: <FaWrench />,
-      submenu: "",
-      path: "/setting",
+      path: "/daily-current-affairs",
+      active: false
+    }
+    ,
+    {
+      menu: "Important contacts",
+      icon: <FaWrench />,
+      path: "/daily-current-affairs",
       active: false
     }
   ];

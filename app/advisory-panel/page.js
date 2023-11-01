@@ -1,6 +1,8 @@
+import HomeLayout from "../page";
+
 const AdvisoryPanel=()=>{
     return(
-        <>
+        <HomeLayout>
    
         <section className="bg-gray-200">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl  py-8">
@@ -27,7 +29,7 @@ const AdvisoryPanel=()=>{
         </section>
 
 
-        </>
+        </HomeLayout>
     )
 }
 export default AdvisoryPanel;

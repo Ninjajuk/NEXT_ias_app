@@ -1,11 +1,12 @@
 import Link from "next/link";
+import HomeLayout from "../page";
 
 
 export default function CenterLayout({
   children
 }) {
   return (
-    <section>
+    <HomeLayout>
           <section>
           <div className="max-w-[1200px] mx-auto ">
             <div className="">
@@ -171,6 +172,6 @@ export default function CenterLayout({
           </div>
         </section>
       {children}
-    </section>
+    </HomeLayout>
   )
 }

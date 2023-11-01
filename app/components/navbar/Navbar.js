@@ -107,7 +107,7 @@ function handlemoblieMenu(){
             </div>
             <div className="flex px-4  items-center py-4 justify-between">
               <div className="" style={{ width: "150px", height: "30px" }}>
-                <Link href="/">
+                <Link href="/home">
                   {" "}
                   <img
                     className="w-full h-full object-cover"
@@ -162,7 +162,7 @@ function handlemoblieMenu(){
           {/* Mobile Menu starts here  */}
           <div className="xl:hidden flex justify-between px-4 py-4 ">
             <div className={` flex justify-between px-4 py-4 ${mobilemenuOpen?'w-[250px]':'w-0'}`} >
-              <Link href="/">
+              <Link href="/home">
                 {" "}
                 <img
                   className="w-full h-full object-cover"

@@ -3,6 +3,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import HomeLayout from '../page';
 
 export default function DashboardLayout({
     children, 
@@ -10,7 +11,7 @@ export default function DashboardLayout({
 
     const pathname=usePathname();
     return (
-      <section>
+      <HomeLayout>
         <div className="max-w-[1200px] mx-auto">
           <h1 className="text-4xl my-4">General Studies Courses</h1>
           <div className="my-4">
@@ -98,6 +99,6 @@ export default function DashboardLayout({
             </p>
           </div>
         </div>
-      </section>
+      </HomeLayout>
     );
   }

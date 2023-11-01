@@ -10,17 +10,17 @@ export default function DashboardLayout({children,})
   {
     return (
       <>
-        <div className="max-h-screen bg-red-100 w-full">
+        <div className="h-screen  w-full">
           <div className="flex w-full">
-            <Sidebar1 style={{ width: "12rem" }} />
+            <Sidebar1 style={{ width: "250px" }} />
             {/* <Sidebar /> */}
             <div
-              className="flex flex-col  bg-red-600 w-full md:w-[calc(100% - 12rem)]"
+              className="flex flex-col  w-full md:w-[calc(100% - 12rem)] "
             //   style={{ width: "calc(100% - 12rem)" }}
             >
               <NavbarDashboard />
-              <main className="overflow-y-auto"> {children}</main>
-              <div  className='mt-auto' ><FooterDashboard /></div>
+              <main className="overflow-y-auto  "> {children}</main>
+              <div  className='mt-auto h-[4rem]' ><FooterDashboard /></div>
            
              
         

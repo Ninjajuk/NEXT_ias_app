@@ -23,13 +23,13 @@ import {
   
 
 export const navdata=[
-{title:'Home',href:'/',isActive:false,},
+{title:'Home',href:'/home',isActive:false,},
 {title:'About us',href:'/about-us',isActive:false,submenu:[{name:'About Us',href:'/about-us',current: false,},{name:'Director desk',href:'/director-desk',current: false,},{name:'Advisory Panel',href:'/advisory-panel',current: false,},{name:'Faculty Panel',href:'/faculty-panel',current: false,}]},
 {title:'Courses',href:'/courses',isActive:false,},
 {title:'Mentorship',href:'/mentorship',isActive:false,},
 {title:'Test Series',href:'/test-series/upsc-prelims-test-series',isActive:false,},
 {title:'Current Affairs',href:'/daily-current-affairs',isActive:false,},
-{title:'Student Portal',href:'/dashboard',isActive:false,},
+{title:'Student Portal',href:'/dashboard/home',isActive:false,},
 {title:'Centers',href:'/centers/delhi',isActive:false,},
 ]
 
