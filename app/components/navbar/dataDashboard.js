@@ -26,7 +26,7 @@ import {
       menu: "Dashboard",
       icon: <MdDashboard />,
       submenu: "",
-      path: "/dashboard",
+      path: "/dashboard/home",
       active: false
     },
     {
@@ -77,14 +77,14 @@ import {
     {
       menu: "Current Affairs",
       icon: <FaWrench />,
-      path: "/daily-current-affairs",
+      path: "/dashboard/current-affairs",
       active: false
     }
     ,
     {
       menu: "Important contacts",
       icon: <FaWrench />,
-      path: "/daily-current-affairs",
+      path: "/dashboard/current-affairs",
       active: false
     }
   ];

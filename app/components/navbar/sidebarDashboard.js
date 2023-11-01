@@ -72,11 +72,12 @@ const Sidebar1 = () => {
                 {/* <h1 className="px-6 font-medium text-black">Home</h1> */}
                 {data.slice(0,5).map((item, index) => (
                   <div key={index}>
-                    <div onClick={handleMenu} className={`flex items-center transition duration-400  p-3 space-x-2 text-sm hover:text-blue-400 cursor-pointer rounded-full text-white 
+                    <div onClick={handleMenu} href={item.path} className={`flex items-center transition duration-400  p-3 space-x-2 text-sm hover:text-blue-400 cursor-pointer rounded-full text-white 
                      `}
                     >
                      <span>{item.icon}</span> 
                       <span className="text-sm whitespace-nowrap">{item.menu}</span>
+               
                       {Array.isArray(item.submenu)&&item.submenu.length > 0 ? (
                           <span className="ml-auto ">
                             <FaAngleDown />
