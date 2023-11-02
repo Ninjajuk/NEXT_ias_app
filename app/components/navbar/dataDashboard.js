@@ -32,16 +32,9 @@ import {
     {
       menu: "My Handouts",
       icon: <FaFileAlt />,
-      path: "",
+      path: "/",
       active: false
     },
-    // {
-    //   menu: "Business analytics",
-    //   icon: <MdAnalytics />,
-    //   submenu: "",
-    //   path: "/business-analytics",
-    //   active: false
-    // },
     {
       menu: "My Bookmarks",
       icon: <FaUsers />,
@@ -71,7 +64,7 @@ import {
     {
       menu: "Free Initiative",
       icon: <MdOutlineSms />,
-      path: "/message",
+      path: "/dashboard/studymaterial",
       active: false
     },
     {
@@ -84,7 +77,7 @@ import {
     {
       menu: "Important contacts",
       icon: <FaWrench />,
-      path: "/dashboard/current-affairs",
+      path: "/dashboard/importantContacts",
       active: false
     }
   ];

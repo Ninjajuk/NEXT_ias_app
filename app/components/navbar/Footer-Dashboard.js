@@ -7,8 +7,9 @@ function FooterDashboard() {
         style={{ height: "4rem", }}
       >
         <div className="flex ">
-          <button className=" text-white" > Privacy</button>
+          <button className=" text-white" >© Privacy</button>
           <button className=" text-white px-2" > Term of Service</button>
+          <button className=" mr-auto" > Designed by Samsu</button>
         </div>
       </div>
     );

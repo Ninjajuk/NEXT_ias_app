@@ -3,62 +3,16 @@
 import { Link } from "@mui/material";
 import UserPanel from "./UserPAnel";
 import { data } from "./dataDashboard";
+import { usePathname } from 'next/navigation'
 
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { useState } from "react";
 
-const Sidebar1 = () => {
-  const [openMenu, setOpenMenu] = useState(false); // Keep track of opened submenu
+const Sidebar1 = ({isMobileSidebarOpen}) => {
 
-  function handleMenu(){
-    setOpenMenu(!openMenu)
-  }
-//   const [openSubmenu, setOpenSubmenu] = useState({}); 
-//   const location = useLocation();
-//   const navigate = useNavigate();
-  // Function to handle submenu click
-//   const [activeSubmenu, setActiveSubmenu] = useState(null);
-
-//   const handleSubMenuClick = (menu) => {
-//     if (openMenu === menu) {
-//       setOpenMenu("");
-//     } else {
-//       setOpenMenu(menu);
-//     }
-//   };
-
-//   const isActiveMenu = (menuPath) => {
-//     if (menuPath === "") {
-//       return data.some((item) => {
-//         if (Array.isArray(item.submenu)) {
-//           return item.submenu.some(
-//             (subItem) => location.pathname === `${item.path}${subItem.path}`
-//           );
-//         }
-//         return false;
-//       });
-//     } else {
-//       return location.pathname.includes(menuPath);
-//     }
-//   };
-
-//   const isActiveSubMenu = (submenuPath) => {
-//     if (location.pathname === submenuPath) {
-//       return location.pathname === submenuPath;
-//     }
-//     return null;
-//   };
-
-//   const isMenuWithActiveSubmenu = (menu) => {
-//     return (
-//       Array.isArray(menu.submenu) &&
-//       menu.submenu.some((subItem) => location.pathname.includes(subItem.path))
-//     );
-//   };
+  const pathname = usePathname()
   return (
     <>
       <div style={{  height: "100vh",backgroundColor:'gray' }}>
-        <div className="hidden md:flex flex-col h-full hover:overflow-y-auto overflow-hidden">
+        <div className={`hidden md:flex flex-col h-full hover:overflow-y-auto overflow-hidden `}>
             <div className="px-6 flex items-center min-w-full h-16">
               <img
                 className="max-w-full h-8"
@@ -72,59 +26,23 @@ const Sidebar1 = () => {
                 {/* <h1 className="px-6 font-medium text-black">Home</h1> */}
                 {data.slice(0,5).map((item, index) => (
                   <div key={index}>
-                    <div onClick={handleMenu} href={item.path} className={`flex items-center transition duration-400  p-3 space-x-2 text-sm hover:text-blue-400 cursor-pointer rounded-full text-white 
+                    <a href={item.path} className={`flex items-center transition duration-600 hover:text-red-600 hover:scale-110 hover:text-lg ease-in-out no-underline ${pathname === item.path ? 'border-l-4 border-red-600 text-red-600' : 'text-white'}  p-3 space-x-2 text-sm  cursor-pointer   
                      `}
                     >
                      <span>{item.icon}</span> 
-                      <span className="text-sm whitespace-nowrap">{item.menu}</span>
-               
-                      {Array.isArray(item.submenu)&&item.submenu.length > 0 ? (
-                          <span className="ml-auto ">
-                            <FaAngleDown />
-                          </span>
-                        ) : (
-                          // <span className="ml-auto text-2xl">
-                          //   <FaAngleDown />
-                          // </span>
-                          null
-                        )
-                       }
-                       
-                    </div>
-                  {Array.isArray(item.submenu)&&openMenu&&item.submenu.map((subItem, subIndex) => (
-                                    <Link
-                                      key={subIndex}
-                                      to=''
-                                      className={` py-1  rounded-full flex flex-col  max-h-0 overflow-hidden transition-max-height duration-200 ease-in-out`}
-                                    >
-                                      {subItem.title}
-                                    </Link>
-                                  ))}
-                  </div>
-                        
+                      <span className="text-sm whitespace-nowrap">{item.menu}</span>    
+                    </a>
+                  </div>     
                 ))}
-
                 <h2 className="p-3 font-bold text-blue-800 text-md">Free Resources</h2>
                       {data.slice(5,8).map((item, index) => (
                   <div key={index}>
-                    <div onClick={handleMenu} className={`flex items-center transition duration-400  p-3 space-x-2 text-sm hover:text-blue-400 cursor-pointer rounded-full text-white 
+                    <a href={item.path}  className={`flex items-center transition duration-400 hover:text-red-600 hover:scale-110 hover:text-lg no-underline ${pathname === item.path ? 'border-l-4 border-red-600 text-red-600' : 'text-white'}   p-3 space-x-2 text-sm  cursor-pointer  
                      `}
                     >
                      <span>{item.icon}</span> 
                       <span className="text-sm whitespace-nowrap">{item.menu}</span>
-                      {Array.isArray(item.submenu)&&item.submenu.length > 0 ? (
-                          <span className="ml-auto ">
-                            <FaAngleDown />
-                          </span>
-                        ) : (
-                          // <span className="ml-auto text-2xl">
-                          //   <FaAngleDown />
-                          // </span>
-                          null
-                        )
-                       }
-                       
-                    </div>
+                    </a>
                   </div>     
                 ))}
               </div>
@@ -134,7 +52,7 @@ const Sidebar1 = () => {
           <UserPanel/>
         </div>
           </div>
-       
+
       </div>
     </>
   );
