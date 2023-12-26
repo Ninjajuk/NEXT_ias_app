@@ -2,7 +2,7 @@ import HomeLayout from "../page";
 
 const AboutUs=()=>{
     return(
-        <HomeLayout>
+        <>
    
         <section className="bg-blue-100">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl  py-8">
@@ -57,7 +57,7 @@ const AboutUs=()=>{
         </div>
         </section>
               {/* image section  and mission*/}
-        </HomeLayout>
+        </>
     )
 }
 export default AboutUs;

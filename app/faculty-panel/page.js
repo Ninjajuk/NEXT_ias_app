@@ -18,7 +18,7 @@ const FacultyPanel=()=>{
     setgsteam(false);
   }
     return (
-      <HomeLayout>
+      <>
         <section className="bg-gray-200">
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl  py-8">
             <h1 className="text-4xl text-sky-600 font-bold mb-2">NEXT IAS</h1>
@@ -118,7 +118,7 @@ const FacultyPanel=()=>{
         </section>
 
 
-      </HomeLayout>
+      </>
     );
 }
 export default FacultyPanel;

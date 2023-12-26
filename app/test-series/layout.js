@@ -11,7 +11,7 @@ export default function TestSeriesLayout({
 
     const pathname=usePathname();
     return (
-        <HomeLayout>
+        <>
           <div className="max-w-[1200px] mx-auto ">
             <h1 className="text-4xl my-4">Test Series</h1>
             <div>
@@ -29,6 +29,6 @@ export default function TestSeriesLayout({
             </div>
             {children}
           </div>
-        </HomeLayout>
+        </>
     );
   }

@@ -6,7 +6,7 @@ export default function CenterLayout({
   children
 }) {
   return (
-    <HomeLayout>
+    <>
           <section>
           <div className="max-w-[1200px] mx-auto ">
             <div className="">
@@ -172,6 +172,6 @@ export default function CenterLayout({
           </div>
         </section>
       {children}
-    </HomeLayout>
+    </>
   )
 }

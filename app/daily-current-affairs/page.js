@@ -16,7 +16,7 @@ export default function DailyCurrentAffairs(){
     setEmail('');
   };
     return (
-      <HomeLayout>
+      <>
         <h1 className="text-2xl md:text-5xl text-center py-4">DailyCurrentAffairs</h1>
         <section className="py-4">
           <div className="w-full px-[25px] flex flex-col md:flex-row gap-4">
@@ -178,6 +178,6 @@ export default function DailyCurrentAffairs(){
             </div>
           </div>
         </section>
-      </HomeLayout>
+      </>
     );
 }

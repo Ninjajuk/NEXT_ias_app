@@ -71,7 +71,7 @@ btn:'Read More'
 
     
     return (
-      <HomeLayout>
+      <>
         <section className="w-full bg-[#cee3d9] ">
           <div className="  ">
             <div className="relative w-full  h-[550px] ">
@@ -250,7 +250,7 @@ btn:'Read More'
           </div>
         </section>
         {/* Featured Courses */}
-      </HomeLayout>
+      </>
     );
 }
 export default NextIasHome;
