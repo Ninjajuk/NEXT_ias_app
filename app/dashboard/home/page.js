@@ -46,8 +46,8 @@ const monthNames = [
                 <div className="pb-4"><span className="text-lg text-blue-800 font-bold">Welcome,Samsu</span> <span className="text-gray-800 ">{formattedDate}</span></div>
                 {/* navlinks tops */}
                 <div className=" word-nowwrap ">     <ul className="flex justify-around border-b-2 border-gray-200">
-                    {tabs.map((item)=>
-                      <li           className={`  cursor-pointer ${
+                    {tabs.map((item ,index)=>
+                      <li   key={index}         className={`  cursor-pointer ${
                         activeTab.id === item.id ? 'text-red-600 border-b-2 border-red-600' : ''
                       }`}
                       onClick={() => handleTabClick(item)}>{item.label}</li>)}

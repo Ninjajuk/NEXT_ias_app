@@ -117,7 +117,7 @@ const LoginForm = ({onClick}) => {
             Login
           </button>
           <div className="flex justify-between mt-4">
-            <p>Don't have an account</p>
+            <p>Dont have an account</p>
             <button
       onClick={onClick}
               className="text-blue-500 hover:underline"

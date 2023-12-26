@@ -16,8 +16,8 @@ const Anubhav=()=>{
               Prelims Test Series for CSE 2024 (Offline/Online)
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
-              {PreMains.slice(0, 1).map((item) => (
-                <a href="">
+              {PreMains.slice(0, 1).map((item,index) => (
+                <a key={index}  href="">
                   <div className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
                     <div className="bg-red-400 h-2/5 w-full">
                       <img

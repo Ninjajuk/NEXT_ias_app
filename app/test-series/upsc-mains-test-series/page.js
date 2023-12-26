@@ -21,9 +21,9 @@ const MainsTestSeriesGsOptional=()=>{
             GS Mains Test Series for CSE 2024
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
-              {PreMains.slice(1, 4).map((item) => (
-                <a href="">
-                  <div className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
+              {PreMains.slice(1, 4).map((item,index) => (
+                <a key={index} href="">
+                  <div  className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
                     <div className="bg-red-400 h-2/5 w-full">
                       <img
                         src={item.img}

@@ -118,7 +118,7 @@ function handlemoblieMenu(){
               <div className="flex">
                 {" "}
                 {navdata.map((item, index) => (
-                  <div
+                  <div key={index}
                     className="relative "
                     onMouseEnter={(e) => handleSubMenuHover(e, index)}
                     onMouseLeave={(e) => handleSubMenuHover(e, index)}

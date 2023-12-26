@@ -16,9 +16,9 @@ export default function FoundationCourses(){
             <h1 className="text-lg py-4 font-bold text-gray-800">Pre Cum Main Foundation Courses</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-4">
-              {PreMains.map((item) => (
-                <a href="">
-                  <div className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
+              {PreMains.map((item,index) => (
+                <a key={index} href="">
+                  <div  className="h-[400px] bg-gray-200 flex flex-col rounded-md shadow-md">
                     <div className="bg-red-400 md:h-2/5 w-full">
                       <img
                         src={item.img}

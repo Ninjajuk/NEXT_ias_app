@@ -31,7 +31,7 @@ const FacultyPanel=()=>{
               experts. They are well known all over India for their easy,
               student-friendly, and effective teaching methodologies. The vast
               experience, in-depth knowledge of the content, and grasp of the
-              UPSC's pattern of examination, combined with the ability to
+              UPSCs pattern of examination, combined with the ability to
               customize the teaching as per individual needs make our faculties
               the most sought-after in the field.
             </p>

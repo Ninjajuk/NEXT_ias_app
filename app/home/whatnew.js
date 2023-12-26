@@ -4,7 +4,7 @@ const WhatsNew=()=>{
         <div className="flex py-4 px-4">
           <div className="w-1/2 flex flex-col justify-between">
               <a className="py-2">GSPM Foundation Course for CSE 2024</a>
-              <a className="py-2">Toppers' Corner</a>
+              <a className="py-2">Toppers Corner</a>
               <a className="py-2">YouTube</a>
        
           </div>

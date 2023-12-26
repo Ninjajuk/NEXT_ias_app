@@ -103,8 +103,8 @@ btn:'Read More'
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl bg-green-100 py-8">
             <h1 className="text-3xl py-2">Current Affairs</h1>
             <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-4  px-2 py-4 ">
-              {gridColum4.map((item, key) => (
-                <div className="flex flex-col  px-4 py-4 bg-white rounded-md ">
+              {gridColum4.map((item, index) => (
+                <div key={index} className="flex flex-col  px-4 py-4 bg-white rounded-md ">
                   <div className="w-full flex justify-center bg-blue-800 mb-2 px-4 py-4 rounded-md text-white">
                     <button className="py-2 ">{item.title}</button>
                   </div>
@@ -176,8 +176,8 @@ btn:'Read More'
               aspirants.
             </p>
             <div className="grid md:grid-cols-2 gap-4  px-2 py-4">
-              {gridColum4.map((item, key) => (
-                <div className="flex flex-col  px-4 py-4 bg-gray-200 rounded-md hover:bg-blue-800 hover:text-white">
+              {gridColum4.map((item, index) => (
+                <div key={index} className="flex flex-col  px-4 py-4 bg-gray-200 rounded-md hover:bg-blue-800 hover:text-white">
                   <div className="w-full flex items-center   mb-2 px-4 py-4 rounded-md ">
                     <span>
                       {" "}
@@ -227,7 +227,7 @@ btn:'Read More'
                     <div className="px-2">
                       <img src="https://cdnstatic.nextias.com/assets/images/what_new_icon.png" />
                     </div>
-                    <div className="px-2 text-white">WHAT'S NEW</div>
+                    <div className="px-2 text-white">WHATS NEW</div>
                   </div>
                   <div
                     onClick={handlestudentcorner}

@@ -78,6 +78,7 @@ const Navbar=()=>{
          
                   {navdata.map((item, index) => (
                     <div
+                    key={index}
                       className="relative "
                       onMouseEnter={(e) => handleSubMenuHover(e, index)}
                       onMouseLeave={(e) => handleSubMenuHover(e, index)}

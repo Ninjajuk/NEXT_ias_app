@@ -1,3 +1,4 @@
+import { IndeterminateCheckBoxOutlined } from '@mui/icons-material';
 import {footerdata} from '../components/navbar/navdata'
 import Link from 'next/link'
 const Footer = () => {
@@ -76,8 +77,8 @@ const Footer = () => {
               <div className="w-full flex flex-col md:flex-row pl-4 pr-1">
                 <div className="md:w-1/5 flex flex-col flex-wrap pb-8">
                   <div className='flex flex-wrap'>
-                  {footerdata.map((item) => (
-                    <Link href={item.href} className="py-2 w-1/2 md:w-full">
+                  {footerdata.map((item,index) => (
+                    <Link key={IndeterminateCheckBoxOutlined} href={item.href} className="py-2 w-1/2 md:w-full">
                       {item.title}
                     </Link>
                   ))}
