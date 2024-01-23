@@ -14,11 +14,7 @@ const Sidebar1 = ({isMobileSidebarOpen}) => {
       <div style={{  height: "100vh" }} className="bg-white">
         <div className={`hidden md:flex flex-col h-full hover:overflow-y-auto overflow-hidden `}>
             <div className="px-6 flex items-center min-w-full h-16">
-              <img
-                className="max-w-full h-8"
-                src="https://cdnstatic.nextias.com/assets/images/next_ias_logo.png"
-                alt="hi"
-              />
+
               {/* <h1 className="pl-3">NinjaKing</h1> */}
             </div>
             <div className="flex flex-col gap-y-7" style={{ flex: "1 1 0%" }}>
