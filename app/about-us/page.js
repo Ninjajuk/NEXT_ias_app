@@ -12,7 +12,7 @@ const AboutUs=()=>{
                     <p className="text-red-600">Next generation institute for the preparation of UPSC Civil Services Examination.</p>
                 </div>
                 <div className="md:w-1/2">
-                    <p>NEXT IAS, an initiative of MADE EASY GROUP, is a premier institute for UPSC Civil Services Examination preparation. We offer programmes to assist students in all the three stages of the preparation - Preliminary examination, Main examination and Personality Test. NEXT IAS was started in 2017 by Mr. B. Singh (Ex. IES), CMD MADE EASY Group. Within a short span of time, the NEXT IAS has become the most preferred destination for the aspirants due to its top faculty panel, comprehensively designed courses and a constant desire to impart quality education.</p>
+                    <p>NEXT IAS, an initiative of MADE EASY GROUP,is a premier institute for UPSC Civil Services Examination preparation. We offer programmes to assist students in all the three stages of the preparation - Preliminary examination, Main examination and Personality Test. NEXT IAS was started in 2017 by Mr. B. Singh (Ex. IES), CMD MADE EASY Group. Within a short span of time, the NEXT IAS has become the most preferred destination for the aspirants due to its top faculty panel, comprehensively designed courses and a constant desire to impart quality education.</p>
                 </div>
             </div>
         </div>
